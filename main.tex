@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,wrapfig}
+\usepackage[
+    colorlinks=true,  % Makes the links colored instead of boxed
+    linkcolor=blue,   % Color for internal links (e.g., table of contents)
+    citecolor=green,  % Color for citations
+    urlcolor=cyan,    % Color for URLs/external links
+]{hyperref}
+\usepackage{physics}
+\usepackage{geometry} % For setting margins
+\geometry{a4paper, margin=1in} % 1-inch margins for a professional look
+\usepackage{setspace} % For line spacing
+\setstretch{1.2} % Set line spacing to 1.2
+
+\begin{document}
+%Title Page and certificate and acknowlwdgements
+\newgeometry{top=5cm,bottom=2.5cm,left=4cm,right=4cm}
+\begin{titlepage}
+
+\begin{center}
+
+
+
+\textup{\Large {\bf Spherical Model of a Ferromagnet}}\\[0.3in]
+
+% Title
+\textbf {Phase Transitions and Critical Phenomena (P455): Term Paper}\\[0.7in]
+
+
+       
+
+% Submitted by
+\normalsize Submitted by \\
+\textbf{Ashlin V Thomas (Roll No: 2211030)}\\
+\textbf{Roshan Mathew Philip (Roll No: 2211192)}\\
+\textbf{Satwik Yadav (Roll No: )}\\
+\textbf{Yash Chauhan (Roll No: )}\\
+\normalsize
+\vspace{1 cm}
+
+\includegraphics[width=0.25 \textwidth]{Images/NISER.png}\\[0.1in]
+\Large{School of Physical Sciences}\\
+\normalsize
+\textsc{National Institute of Science Education and Research},\\
+Tehsildar Office, Khurda\\
+Pipli, Near, Jatni, Odisha 752050\\
+
+\vspace{.4in}
+Submitted to \\
+\large\textbf{Dr. Sumedha}\\
+\normalsize
+Associate Professor
+
+% Bottom of the page
+\Large{School of Physical Sciences}\\
+\normalsize
+\textsc{National Institute of Science Education and Research},\\
+Tehsildar Office, Khurda\\
+Pipli, Near, Jatni, Odisha 752050\\
+\end{center}
+
+\end{titlepage}
+\restoregeometry
+
+
+
+
+%Abstract
+\newgeometry{top=6.5cm,bottom=2.5cm,left=5cm,right=5cm}
+\cleardoublepage
+\begin{center}
+    \Large{\textbf{Acknowledgements}}
+\end{center}
+
+\vspace{0.2in}
+
+We would like to express our profound gratitude to our course instructor Dr.Sumedha and the School of Physical Sciences for providing us with an opportunity to undertake this project. Support and guidance provided by the instructor during the coursework and project was critical towards the successful completion of this project.
+
+\newpage
+\restoregeometry
+
+
+\newgeometry{top=6.5cm,bottom=2.5cm,left=3.5cm,right=3.5cm}
+\begin{abstract}
+
+\end{abstract}
+\restoregeometry
+
+
+
+%Content Table Page
+\newpage
+\tableofcontents
+
+
+\pagenumbering{arabic}
+
+\newpage
+
+\section{Introduction}
+
+In the study of phase transitions, especially how a material like a ferromagnet spontaneously develops magnetization below its critical temperature, has always been a challenging problem in statistical mechanics. Numerous efforts have been made to create models that can accurately describe this behavior, but many of these models are too complex to solve exactly, especially in three dimensions. A notable example is the 3 dimensional Ising model, which remains unsolved to this day.
+That is where the Spherical Model of a Ferromagnet\cite{Foundational}, proposed by T. H. Berlin and M. Kac in 1952, comes into the play. This model simplifies the problem by relaxing the strict constraints on individual spins, allowing for an exact solution in arbitrary dimensions, allowing us to explore critical phenomena and phase transitions in a three dimensional setting.
+
+In the classic Ising model, each spin can only take on discrete values of $+1$ or $-1$. Berlin and Kac relaxed this constraint by allowing the spins to take continuous values by replacing it with a global constraint on the sum of the squares of the spins. This made the model mathematically tractable in arbitrary dimensions, and exhibited a phase transition in all dimensions greater than two. 
+Apart from the exact solution, the model proved to be a valuable tool for understanding Bose-Einstein condensation\cite{BECanalogy} and also in the study of critical phenomena in systems of finite thickness\cite{finitethickness}. 
+
+\section{The Gaussian Model}
+The Spherical Model was introduced as a modification of the Gaussian model by Berlin and Kac. The Gaussian model is a continuous version of the Ising model where the spins can take any real value, and the Hamiltonian is given by:
+\begin{equation}
+    H = -J \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j
+\end{equation}
+where $J$ is the interaction strength, and the sum is over nearest neighbor pairs. Each spin $\epsilon_i$ is drawn from a Gaussian distribution with zero mean and unit variance. That is, the probability of finding the $i^{th}$ spin with between $\epsilon_i$ and $\epsilon_i + d\epsilon_i$ is given by:
+\begin{equation}
+    P(\epsilon_i) d\epsilon_i = \frac{1}{\sqrt{2\pi}} e^{-\frac{\epsilon_i^2}{2}} d\epsilon_i
+\end{equation}
+This yields the partition function as:
+\begin{align}
+    Z &=  \frac{1}{(2\pi)^{N/2}} \int_{-\infty}^{\infty} \ldots \int_{-\infty}^{\infty} \left( \prod_{i=1}^{N} d\epsilon_i \right) exp \left( -\frac{1}{2} \sum_{i=1}^{N} \epsilon_i^2 + K \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j \right) \\
+     & = exp \left( -\frac{1}{2} \sum_{p=1}^{N} \ln(1 - 2 K \lambda_p) \right)
+\end{align}
+where $K = \beta J$, and $\lambda_p$ for different lattices are given in the table below:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Lattice & $\lambda_p$ \\
+        \hline \hline
+        1-dimensional chain & $2 cos\left(\frac{2 \pi (p-1)}{N} \right)$ \\
+        \hline
+        2-dimensional square lattice & 2 $cos\left(\frac{2 \pi (p-1)}{N} \right) + 2 cos\left(\frac{2 \pi n_1 (p-1) }{N} \right)$ \\
+        \hline
+        3-dimensional cubic lattice & $2 cos\left(\frac{2 \pi (p-1)}{N} \right) + 2 cos\left(\frac{2 \pi n_1 (p-1) }{N} \right) + 2 cos\left(\frac{2 \pi n_1 n_2 (p-1) }{N} \right)$ \\
+        \hline
+    \end{tabular}
+    \caption{Values of $\lambda_p$ for different lattices}
+    \label{tab:lambda}
+\end{table}
+
+
+Here, $n_1$ and $n_2$ are the number of sites along the two dimensions of the 2D lattice, and $N = n_1 n_2$ is the total number of sites. Similarly, for the 3D lattice, $n_1$, $n_2$, and $n_3$ are the number of sites along the three dimensions, and $N = n_1 n_2 n_3$ is the total number of sites.
+
+
+\bibliography{ref.bib}
+\bibliographystyle{ieeetr}
+\nocite{*}
+
+\end{document}
