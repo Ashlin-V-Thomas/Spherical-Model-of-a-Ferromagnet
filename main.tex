@@ -150,7 +150,7 @@ On substituting the values of $\lambda_p$ from Table \ref{tab:lambda}, we find t
 Despite this, the free energy becomes complex for $K > K_c = \frac{1}{4 n}$, where $n$ is the dimensionality of the lattice. This indicates that the Gaussian model is not well defined below a critical temperature. So,
 we introduce the spherical model, which retains all important features of the Gaussian model and is valid for all temperatures.
 
-\section{The Spherical Model}
+\section
 A spin configuration $\mathbf{\epsilon} = (\epsilon_1, \epsilon_2, \ldots, \epsilon_N) \in \mathbb{R}^N$ is an allowed configuration in the Ising model if $\epsilon_i = \pm 1$ for all $1 \leq i \leq N$. That is, $\mathbf{\epsilon}$ lies on the vertices of an $N$-dimensional hypercube of side length 2 units centered at the origin. 
 Consider a sphere of radius $\sqrt{N}$ centered at the origin in $\mathbb{R}^N$:
 \begin{equation}
@@ -162,6 +162,38 @@ The spherical constraint can be modelled in the partition function as follows:
 \begin{align}
     Z = & \frac{\Gamma(N/2)}{2(\pi)^{N/2} N^{(N-1)/2}} \int_{-\infty}^{\infty} \ldots \int_{-\infty}^{\infty} \left( \prod_{i=1}^{N} d\epsilon_i \right) exp \left( K \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j \right) \delta \left( N - \sum_{i=1}^{N} \epsilon_i^2 \right) 
 \end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Spherical Model in a Homogeneous Magnetic Field}
+The model Hamiltonian can be modified to include the effect of an external homogeneous magnetic field $H$ as follows:
+\begin{equation}
+    H = -J \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j - H \mu_0 \sum_{i=1}^{N} \epsilon_i = -J \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j - H \mu_0 \sqrt{N} y_1
+\end{equation}
+where $\mu_0$ is the magnetic moment associated with a single spin, and $y_1 = \frac{1}{\sqrt{N}} \sum_{i=1}^{N} \epsilon_i$. \\
+In the presence of the magnetic field, the partition function becomes:
+\begin{align}
+    Z_H = & \frac{1}{A_N} \frac{1}{2 \pi i} \int_{-i \infty}^{i \infty} ds \ e^{s N} \int_{-\infty}^{\infty} \ldots \int_{-\infty}^{\infty} \left( \prod_{i=1}^{N} dy_i \right) exp \left( -\sum_{j=1}^{N} y_j^2 (s - K \lambda_j) + 2 \sqrt{N} M y_1 \right)
+\end{align}
+where $M = \frac{H \mu_0}{2 k_B T}$. \\
+The $y_1$ integral can be evaluated by completing the square in the exponent, yielding a factor of $exp \left( \frac{N M^2}{s - K \lambda_1} \right)$ in the integrand. The remaining integrals can be evaluated as before, as the only change is in the prefactor of $s$ in the exponent. 
+Following similar strategy, one can find the free energy per spin in the thermodynamic limit as:
+\begin{equation}
+    \psi_H = \frac{k_B T}{2} \left( 1 + ln(4 K) + 4 K z_s - f_n(z_s) + \frac{M^2}{K(z_s- \lambda_1/2)} \right)
+\end{equation}
+where $z_s = z_s(K,H)$ is the solution of the saddle point equation:
+\begin{equation}
+    4K = \left( \dv{f_n}{z} \right)_{z=z_s} - \frac{M^2}{K (z_s- \lambda_1/2)^2}
+\end{equation}
 
 \bibliography{ref.bib} 
 \bibliographystyle{ieeetr}

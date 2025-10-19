@@ -1,2 +1,4 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}The Gaussian Model}{1}{section.2}%
+\contentsline {section}{\numberline {3}A}{2}{section.3}%
+\contentsline {section}{\numberline {4}Spherical Model in a Homogeneous Magnetic Field}{2}{section.4}%
