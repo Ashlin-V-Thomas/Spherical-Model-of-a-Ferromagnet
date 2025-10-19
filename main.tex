@@ -95,10 +95,10 @@ We would like to express our profound gratitude to our course instructor Dr.Sume
 \tableofcontents
 
 
-\pagenumbering{arabic}
+
 
 \newpage
-
+\pagenumbering{arabic}
 \section{Introduction}
 
 In the study of phase transitions, especially how a material like a ferromagnet spontaneously develops magnetization below its critical temperature, has always been a challenging problem in statistical mechanics. Numerous efforts have been made to create models that can accurately describe this behavior, but many of these models are too complex to solve exactly, especially in three dimensions. A notable example is the 3 dimensional Ising model, which remains unsolved to this day.
@@ -142,8 +142,28 @@ where $K = \beta J$, and $\lambda_p$ for different lattices are given in the tab
 
 Here, $n_1$ and $n_2$ are the number of sites along the two dimensions of the 2D lattice, and $N = n_1 n_2$ is the total number of sites. Similarly, for the 3D lattice, $n_1$, $n_2$, and $n_3$ are the number of sites along the three dimensions, and $N = n_1 n_2 n_3$ is the total number of sites.
 
+The free energy per spin in the thermodynamic limit can be found using the partition function as:
+\begin{equation}
+    \psi = \frac{k_B T}{2} \lim_{N \rightarrow \infty} \frac{1}{N} \sum_{p=1}^{N} \ln(1 - 2 K \lambda_p)
+\end{equation}
+On substituting the values of $\lambda_p$ from Table \ref{tab:lambda}, we find that the free energy per spin for the 1D, 2D, and 3D lattices are in agreement with the form of the free energy obtained from the Ising model. 
+Despite this, the free energy becomes complex for $K > K_c = \frac{1}{4 n}$, where $n$ is the dimensionality of the lattice. This indicates that the Gaussian model is not well defined below a critical temperature. So,
+we introduce the spherical model, which retains all important features of the Gaussian model and is valid for all temperatures.
 
-\bibliography{ref.bib}
+\section{The Spherical Model}
+A spin configuration $\mathbf{\epsilon} = (\epsilon_1, \epsilon_2, \ldots, \epsilon_N) \in \mathbb{R}^N$ is an allowed configuration in the Ising model if $\epsilon_i = \pm 1$ for all $1 \leq i \leq N$. That is, $\mathbf{\epsilon}$ lies on the vertices of an $N$-dimensional hypercube of side length 2 units centered at the origin. 
+Consider a sphere of radius $\sqrt{N}$ centered at the origin in $\mathbb{R}^N$:
+\begin{equation}
+S_{N-1}(\sqrt{N}) = \{ \mathbf{\epsilon} \in \mathbb{R}^N : \sum_{i=1}^{N} \epsilon_i^2 = N \} 
+\end{equation}
+Clearly, all allowed configurations of the Ising model lie on this sphere. The spherical model allows every point on $S_{N-1}(\sqrt{N})$ to be an allowed configuration. \\
+
+The spherical constraint can be modelled in the partition function as follows:
+\begin{align}
+    Z = & \frac{\Gamma(N/2)}{2(\pi)^{N/2} N^{(N-1)/2}} \int_{-\infty}^{\infty} \ldots \int_{-\infty}^{\infty} \left( \prod_{i=1}^{N} d\epsilon_i \right) exp \left( K \sum_{\langle i,j \rangle} \epsilon_i \epsilon_j \right) \delta \left( N - \sum_{i=1}^{N} \epsilon_i^2 \right) 
+\end{align}
+
+\bibliography{ref.bib} 
 \bibliographystyle{ieeetr}
 \nocite{*}
 

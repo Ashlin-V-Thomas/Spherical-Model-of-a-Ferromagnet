@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1760432666.00862 -1
+["bibtex main"] 1760526948.23657 "main.aux" "main.bbl" "main" 1760526952.64229 0
   "./ref.bib" 1760430158 885 edd4930d78aa69f271fcdef54359dc94 ""
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1760432664 829 6cb65161655b0d791d1e017635503ba3 "pdflatex"
+  "main.aux" 1760526951 829 d11a87dc46fd083ac20532892882866a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760432663.44723 "c:/Users/CROMA/OneDrive/Documents/Semester 7/Phase Transtitions Term Paper/main.tex" "main.pdf" "main" 1760432666.00923 0
+["pdflatex"] 1760526948.87562 "c:/Users/CROMA/OneDrive/Documents/GitHub/Spherical-Model-of-a-Ferromagnet/main.tex" "main.pdf" "main" 1760526952.64345 0
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233951854 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -101,12 +101,12 @@
   "C:/Users/CROMA/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1729486957 280643 0ade278ce1576cf6c4aab26c605e0ea7 ""
   "C:/Users/CROMA/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1729486965 11938423 385e6485689cf4ebf8ec71052ba4a24d ""
   "Images/NISER.png" 1760197110 274313 7e92523128eea1cfc04e9a689fa96ea6 ""
-  "c:/Users/CROMA/OneDrive/Documents/Semester 7/Phase Transtitions Term Paper/main.tex" 1760432661 6446 396861993521b45024b71628152da9c4 ""
-  "main.aux" 1760432664 829 6cb65161655b0d791d1e017635503ba3 "pdflatex"
-  "main.bbl" 1760431332 687 ad3ec51fe4c0c8fbd5d5ec672d3da09e "bibtex main"
-  "main.out" 1760432664 242 03a57e6d596a58feeb5b3ef63f69c306 "pdflatex"
-  "main.tex" 1760432661 6446 396861993521b45024b71628152da9c4 ""
-  "main.toc" 1760432665 142 26c3a49edc2ddb00f5ea5f720ba52f37 "pdflatex"
+  "c:/Users/CROMA/OneDrive/Documents/GitHub/Spherical-Model-of-a-Ferromagnet/main.tex" 1760526942 7264 deb2a75b099c8f2d6d7c60c0c067bcc4 ""
+  "main.aux" 1760526951 829 d11a87dc46fd083ac20532892882866a "pdflatex"
+  "main.bbl" 1760526948 687 ad3ec51fe4c0c8fbd5d5ec672d3da09e "bibtex main"
+  "main.out" 1760526951 242 03a57e6d596a58feeb5b3ef63f69c306 "pdflatex"
+  "main.tex" 1760526942 7264 deb2a75b099c8f2d6d7c60c0c067bcc4 ""
+  "main.toc" 1760526951 142 343dc53e978e2bd18580954363c2fbe3 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
